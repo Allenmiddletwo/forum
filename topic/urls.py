@@ -6,7 +6,7 @@ from .models import *
 class TopicList(ListView):
     model = Topic
     ordering = ['-created']
-    paginate_by = 20        #每頁主題數
+    paginate_by = 20        # 每頁主題數
 
 # 新增討論主題
 class TopicNew(CreateView):
