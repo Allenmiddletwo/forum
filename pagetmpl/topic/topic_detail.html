@@ -10,6 +10,9 @@
     </div>
   </div>
   <div class="card-body">
+    {% if perms.topic.delete_topic %}
+    <a href="{% url 'topic_delete' topic.id %}" class="btn btn-sm btn-danger float-right">刪除主題</a>
+    {% endif %}
     {{ topic.content|linebreaks }}
   </div>
   {% if user.is_authenticated %}
