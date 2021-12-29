@@ -8,6 +8,7 @@
       <th>討論主題</th>
       <th>發起人</th>
       <th>回覆時間</th> 
+      <th>人氣</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,7 @@
       <td>{{topic.replied|date:"Y/m/d H:i"}}</td>
       <td>
         <span class="badge badge-danger">{{ topic.hits }}</span>
+        <span class="badge badge-secondary">{{ topic.reply_set.count }}</span>
       </td>
     </tr>
     {% endfor %}
